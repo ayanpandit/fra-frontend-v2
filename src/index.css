@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Global font: Playfair Display everywhere ── */
+*, *::before, *::after {
+  font-family: 'Playfair Display', serif !important;
+}
+
+/* ── Buttons keep Funnel Display ── */
+.left-div,
+.form-submit,
+.newsletter-btn,
+.gs-cta-btn,
+.hero2-btn {
+  font-family: 'Funnel Display', sans-serif !important;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: clip;
+}
+
+#root {
+  overflow-x: clip;
+  width: 100%;
+}

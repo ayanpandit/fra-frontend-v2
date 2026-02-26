@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>9:16 Image</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+
+        .image-container {
+            aspect-ratio: 9 / 16;
+            height: 80vh;
+            overflow: hidden;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Concave cut at top-left */
+        .image-container::before {
+            content: "";
+            position: absolute;
+            top: -120px;
+            left: -120px;
+            width: 240px;
+            height: 240px;
+            background: #f5f5f5;
+            border-radius: 25%;
+            z-index: 2;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
+        /* Circle in bottom-right of the cutout square */
+        .image-container .cutout-circle {
+            position: absolute;
+
+            
+            top: 2px;
+            left: 2px;
+            width: 105px;
+            height: 105px;
+            background: #e2c97e;
+            border-radius: 50%;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="image-container">
+        <span class="cutout-circle"></span>
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Image">
+    </div>
+
+</body>
+
+</html>
