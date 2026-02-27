@@ -644,3 +644,4 @@ const FooterContact = () => {
 };
 
 export default FooterContact;
+// Note: The above code is a React component for the footer section of the VanMitra website. It includes a contact form, contact information, navigation links, social media icons, and a newsletter subscription form, all styled with CSS-in-JS.
