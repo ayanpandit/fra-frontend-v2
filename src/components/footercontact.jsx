@@ -411,9 +411,26 @@ const styles = `
     .footer-inner { padding: 36px 20px 0 20px; }
     .footer-contact-row { grid-template-columns: 1fr; }
     .footer-cols { grid-template-columns: 1fr 1fr; gap: 24px; }
-    .footer-bottom { flex-direction: column; align-items: flex-start; }
+    .footer-bottom { flex-direction: column; align-items: stretch; }
+    .footer-social { align-items: flex-start; }
+    .footer-newsletter { width: 100%; flex-direction: row; }
+    .newsletter-input { flex: 1; width: auto; min-width: 0; }
     .footer-copy-bar { padding: 14px 20px; justify-content: center; }
     .form-row { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 420px) {
+    .footer-newsletter { flex-direction: column; gap: 10px; }
+    .newsletter-input {
+      width: 100%;
+      border-right: 1px solid rgba(255,255,255,0.15);
+      border-radius: 10px;
+    }
+    .newsletter-btn {
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+    }
   }
 `;
 
@@ -644,4 +661,3 @@ const FooterContact = () => {
 };
 
 export default FooterContact;
-// Note: The above code is a React component for the footer section of the VanMitra website. It includes a contact form, contact information, navigation links, social media icons, and a newsletter subscription form, all styled with CSS-in-JS.
